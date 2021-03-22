@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import Preloader from "../../common/Preloader/Preloader";
 import s from "./ProfileInfo.module.css";
 
-const ProfileStatusWithHooks = (props) => {
+const ProfileStatusWithHooks = ({updateStatus, ...props}) => {
 
     let [editMode, setEditMode] = useState(false)
     let [status, setStatus] = useState(props.status)
@@ -17,7 +17,7 @@ const ProfileStatusWithHooks = (props) => {
 
     const deactivateEditMode = () => {
         setEditMode(false)
-        props.updateStatus(status)
+       updateStatus(status)
     }
 
     const onStatusChange = (e) => {
