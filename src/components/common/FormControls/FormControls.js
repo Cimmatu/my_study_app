@@ -1,13 +1,13 @@
 import styles from './FormControls.module.css'
 
-export const FormControl = ({input, meta, children}) =>{
-    const someError = meta.touched && meta.error
+export const FormControl = ({input, meta: {touched, error}, children}) =>{
+    const someError = touched && error
     return(
         <div className={styles.formControl + " " + (someError ? styles.error : "")} >
             <div>
                 {children}
             </div>
-            {someError && <span>{meta.error}</span>}
+            {someError && <span>{error}</span>}
         </div>
     )
 }
