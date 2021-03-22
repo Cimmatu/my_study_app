@@ -1,0 +1,21 @@
+.nav{
+
+    padding: 20px;
+    grid-area: n;
+    background-color: indigo;
+  
+  }
+
+.item a{
+    color: white;
+    text-decoration: none
+}
+
+.item a.active{
+    color: gold
+}
+
+.friends{
+    padding-top: 60px;
+
+}
